@@ -1,5 +1,5 @@
-// load up our shiny new route for users
-const userRoutes = require('./phones');
+// load up our shiny new route for phones
+const phoneRoutes = require('./phones');
 
 const appRouter = (app, fs) => {
   // we've added in a default route here that handles empty routes
@@ -8,9 +8,13 @@ const appRouter = (app, fs) => {
     res.send('Welcome to your rest API');
   });
 
-  // run our user route module here to complete the wire up
-  userRoutes(app, fs);
+  // run our phone route module here to complete the wire up
+  phoneRoutes(app, fs);
 };
 
 // this line is unchanged
 module.exports = appRouter;
+
+
+
+
